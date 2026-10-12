@@ -1,0 +1,537 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio de Mohamed Lhikioui — Élève Ingénieur en Génie Digital et IA en Santé à l'École SupTech Santé." />
+  <meta name="author" content="Mohamed Lhikioui" />
+  <title>Mohamed Lhikioui — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <div id="scroll-progress"></div>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo"><span class="logo-bracket">&lt;</span>ML<span
+          class="logo-bracket">/&gt;</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Accueil</a></li>
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#projects" class="nav-link">Projets</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge"><span class="badge-dot"></span>Disponible pour un stage</div>
+        <div class="hero-greeting">Bonjour, je suis</div>
+        <h1 class="hero-name">
+          <span class="name-line">Mohamed</span>
+          <span class="name-line accent-text">Lhikioui</span>
+        </h1>
+        <p class="hero-subtitle">
+          Élève Ingénieur en <span class="highlight-cyan">Génie Digital &amp; IA</span> en Santé<br />
+          <span class="fira">2ème année</span> · École <span class="highlight-purple">SupTech Santé</span>
+        </p>
+        <div class="hero-tags">
+          <span class="tag"><svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.66z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.66z"/></svg>IA Médicale</span>
+          <span class="tag"><svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Digital Health</span>
+          <span class="tag"><svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Full Stack</span>
+          <span class="tag"><svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>LLM / RAG</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><span>Voir mes projets</span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></a>
+          <a href="#contact" class="btn btn-outline"><span>Me contacter</span></a>
+        </div>
+        <div class="hero-scroll-hint"><span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="profile-img-wrap">
+          <img src="me.jpeg" alt="Mohamed Lhikioui - Élève Ingénieur en Génie Digital et IA en Santé"
+            class="profile-img" />
+          <div class="profile-img-glow"></div>
+          <div class="profile-img-ring"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span><span
+          class="stat-label">Projets</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="12">0</span><span class="stat-plus">+</span><span
+          class="stat-label">Technologies</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="2">0</span><span class="stat-label">Années
+          d'études</span></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01. WHO I AM</span>
+        <h2 class="section-title">À propos de <span class="accent-cyan">moi</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <img src="me.jpeg" alt="Mohamed Lhikioui" class="avatar-photo" />
+              <div class="avatar-pulse"></div>
+            </div>
+          </div>
+          <div class="about-card-info">
+            <div class="info-row"><span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><span>SupTech Santé — 2ème année</span></div>
+            <div class="info-row"><span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Maroc</span></div>
+            <div class="info-row"><span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><a href="https://lhikioui.tech" target="_blank"
+                rel="noopener">lhikioui.tech</a></div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p class="about-lead">Passionné par la convergence entre la <strong>technologie de pointe</strong> et le
+            domaine <strong>médical</strong>, je me forme pour devenir un ingénieur capable de transformer les systèmes
+            de santé grâce à l'intelligence artificielle.</p>
+          <p>Mon champ d'intérêt principal porte sur le <span class="highlight-cyan">traitement d'images
+              médicales</span> — analyser des radiographies ou des IRM avec des modèles de deep learning — et sur les
+            architectures <span class="highlight-purple">LLM/RAG</span>, pour créer des assistants intelligents capables
+            d'aider les professionnels de santé dans leurs décisions cliniques.</p>
+          <p>Je crois fermement que l'innovation en santé ne peut pas se faire sans une solide maîtrise technique. C'est
+            pourquoi je développe simultanément mes compétences en développement full-stack, en data science et en génie
+            logiciel, afin de concevoir des solutions complètes, robustes et centrées sur l'utilisateur médical.</p>
+          <p>Fondateur de <strong>Lhikioui.tech</strong>, je vulgarise la technologie en Darija pour rendre l'innovation
+            accessible à tous. Je suis convaincu qu'un bon ingénieur doit aussi savoir <span
+              class="highlight-cyan">communiquer et transmettre</span> sa passion.</p>
+          <div class="about-values">
+            <div class="value-chip"><svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Innovation</div>
+            <div class="value-chip"><svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Collaboration</div>
+            <div class="value-chip"><svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Apprentissage continu</div>
+            <div class="value-chip"><svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Impact santé</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02. WHAT I KNOW</span>
+        <h2 class="section-title">Compétences <span class="accent-purple">techniques</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <h3>Développement Web</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">HTML5</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">CSS3</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">JavaScript</span><span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">React</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">FastAPI</span><span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">Flask / Streamlit</span><span
+                  class="skill-pct">65%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:65%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="badge-cloud">
+            <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span><span
+              class="badge">React</span><span class="badge">Bootstrap</span><span class="badge">FastAPI</span><span
+              class="badge">Flask</span><span class="badge">Streamlit</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+            <h3>Langages &amp; Données</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">Python</span><span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">C / C++</span><span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">SQL / MySQL</span><span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:75%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="badge-cloud">
+            <span class="badge">Python</span><span class="badge">C</span><span class="badge">C++</span><span
+              class="badge">SQL</span><span class="badge">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div>
+            <h3>IA &amp; Outils</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">Machine Learning</span><span
+                  class="skill-pct">80%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">Data Mining</span><span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">Git / GitHub</span><span
+                  class="skill-pct">85%</span></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name fira">Linux (WSL)</span><span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:70%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="badge-cloud">
+            <span class="badge">ML</span><span class="badge">Data Mining</span><span class="badge">Git</span><span
+              class="badge">GitHub</span><span class="badge">Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03. WHAT I VE BUILT</span>
+        <h2 class="section-title">Expériences &amp; <span class="accent-cyan">Projets</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="project">Projets</button>
+        <button class="filter-btn" data-filter="experience">Expériences</button>
+        <button class="filter-btn" data-filter="community">Communauté</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card reveal" data-category="experience">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-top">
+                <div class="project-icon-wrap huawei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                <div class="project-badges"><span class="pbadge pbadge-exp">Expérience</span><span
+                    class="pbadge pbadge-global">International</span></div>
+              </div>
+              <h3 class="project-title">Huawei Seeds for the Future 2026</h3>
+              <p class="project-desc">Programme d'immersion technologique de renommée mondiale en Chine, organisé par
+                Huawei. Exploration approfondie des technologies 5G, Cloud Computing et Intelligence Artificielle
+                appliquée.</p>
+              <div class="project-tech"><span class="tech-tag">5G</span><span class="tech-tag">Cloud</span><span
+                  class="tech-tag">IA</span><span class="tech-tag">Networking</span></div>
+              <div class="project-footer"><span class="project-year">2026</span><span class="project-flip-hint">Voir
+                  détails →</span></div>
+            </div>
+            <div class="project-card-back">
+              <h3>Points clés</h3>
+              <ul>
+                <li>Sélection compétitive parmi les meilleurs étudiants</li>
+                <li>Immersion culturelle et technologique en Chine</li>
+                <li>Formations sur les réseaux 5G et Cloud Huawei</li>
+                <li>Networking international avec des pairs du monde entier</li>
+                <li>Certification Huawei à l'issue du programme</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="experience">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-top">
+                <div class="project-icon-wrap sgtm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                <div class="project-badges"><span class="pbadge pbadge-exp">Stage IT</span><span
+                    class="pbadge pbadge-web">Full Stack</span></div>
+              </div>
+              <h3 class="project-title">Stage IT — SGTM</h3>
+              <p class="project-desc">Développement complet d'une application web de gestion documentaire et de
+                planification de tâches pour la SGTM. Architecture moderne React/FastAPI avec base de données MySQL.</p>
+              <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">FastAPI</span><span
+                  class="tech-tag">MySQL</span><span class="tech-tag">Python</span></div>
+              <div class="project-footer"><span class="project-year">2025</span><span class="project-flip-hint">Voir
+                  détails →</span></div>
+            </div>
+            <div class="project-card-back">
+              <h3>Réalisations</h3>
+              <ul>
+                <li>Système de gestion documentaire centralisé</li>
+                <li>Planification et suivi des tâches en temps réel</li>
+                <li>Authentification JWT sécurisée</li>
+                <li>Dashboard analytique pour les managers</li>
+                <li>Interface responsive adaptée mobile/desktop</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal featured" data-category="project">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-top">
+                <div class="project-icon-wrap health"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <div class="project-badges"><span class="pbadge pbadge-featured"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:11px;height:11px;vertical-align:middle;margin-right:4px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Featured</span><span
+                    class="pbadge pbadge-health">HealthTech</span></div>
+              </div>
+              <h3 class="project-title">Lhikioui Care — SIH</h3>
+              <p class="project-desc">Conception et développement d'un Système d'Information Hospitalier complet.
+                Gestion des patients, dossiers médicaux électroniques, planification des rendez-vous et module IA de
+                diagnostic.</p>
+              <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span
+                  class="tech-tag">React</span><span class="tech-tag">MySQL</span><span class="tech-tag">ML</span></div>
+              <div class="project-footer"><span class="project-year">2024–2025</span><span
+                  class="project-flip-hint">Voir détails →</span></div>
+            </div>
+            <div class="project-card-back">
+              <h3>Fonctionnalités</h3>
+              <ul>
+                <li>Gestion complète des patients et dossiers médicaux</li>
+                <li>Planification intelligente des rendez-vous</li>
+                <li>Suivi des prescriptions et ordonnances</li>
+                <li>Module d'aide au diagnostic par IA</li>
+                <li>Tableaux de bord statistiques hospitaliers</li>
+                <li>Conformité RGPD et sécurité des données médicales</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="community">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-top">
+                <div class="project-icon-wrap apex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M6 9.5A17 17 0 0 1 20 3.5c0 6-3.5 11-6.5 14.5L12 16l-1.5-1.5z"/></svg></div>
+                <div class="project-badges"><span class="pbadge pbadge-comm">Communauté</span><span
+                    class="pbadge pbadge-leader">Leadership</span></div>
+              </div>
+              <h3 class="project-title">APEX DIGITAL</h3>
+              <p class="project-desc">Secrétaire Général et membre de l'équipe Tech Innovation. Co-fondateur et
+                développeur de la plateforme de recrutement APEX DIGITAL, connectant talents et entreprises tech.</p>
+              <div class="project-tech"><span class="tech-tag">Leadership</span><span class="tech-tag">Web
+                  Dev</span><span class="tech-tag">Recrutement</span></div>
+              <div class="project-footer"><span class="project-year">2024–Présent</span><span
+                  class="project-flip-hint">Voir détails →</span></div>
+            </div>
+            <div class="project-card-back">
+              <h3>Responsabilités</h3>
+              <ul>
+                <li>Secrétaire Général de l'organisation</li>
+                <li>Membre de l'équipe Tech Innovation</li>
+                <li>Développement de la plateforme de recrutement</li>
+                <li>Définition de la stratégie digitale</li>
+                <li>Organisation d'événements tech et hackathons</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="community">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-top">
+                <div class="project-icon-wrap content"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+                <div class="project-badges"><span class="pbadge pbadge-comm">Communauté</span><span
+                    class="pbadge pbadge-content">Contenu</span></div>
+              </div>
+              <h3 class="project-title">Lhikioui.tech</h3>
+              <p class="project-desc">Fondateur et créateur de contenu tech en Darija. Mission : démocratiser l'IA et la
+                technologie en rendant les concepts complexes accessibles à la communauté arabophone marocaine.</p>
+              <div class="project-tech"><span class="tech-tag">Darija</span><span
+                  class="tech-tag">Vulgarisation</span><span class="tech-tag">IA</span><span
+                  class="tech-tag">Tech</span></div>
+              <div class="project-footer"><span class="project-year">2024–Présent</span><a href="https://lhikioui.tech"
+                  target="_blank" rel="noopener" class="project-link">lhikioui.tech ↗</a></div>
+            </div>
+            <div class="project-card-back">
+              <h3>Initiatives</h3>
+              <ul>
+                <li>Création de contenu vidéo tech en Darija</li>
+                <li>Vulgarisation de l'IA et du Machine Learning</li>
+                <li>Articles et tutoriels technologiques</li>
+                <li>Podcast sur les tendances digitales au Maroc</li>
+                <li>Communauté de passionnés tech marocains</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04. GET IN TOUCH</span>
+        <h2 class="section-title">Me <span class="accent-cyan">contacter</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-lead">Vous avez un projet innovant en IA médicale ? Une opportunité de stage ou de
+            collaboration ? N'hésitez pas à me contacter, je serai ravi d'échanger !</p>
+          <div class="contact-links">
+            <a href="https://github.com/lhikioui" target="_blank" rel="noopener" class="social-link" id="link-github">
+              <div class="social-icon-wrap"><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                </svg></div>
+              <div class="social-text"><span class="social-name">GitHub</span><span
+                  class="social-handle">@lhikioui</span></div>
+            </a>
+            <a href="https://linkedin.com/in/mohamed-lhikioui" target="_blank" rel="noopener" class="social-link"
+              id="link-linkedin">
+              <div class="social-icon-wrap"><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg></div>
+              <div class="social-text"><span class="social-name">LinkedIn</span><span class="social-handle">Mohamed
+                  Lhikioui</span></div>
+            </a>
+            <a href="https://lhikioui.tech" target="_blank" rel="noopener" class="social-link" id="link-website">
+              <div class="social-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg></div>
+              <div class="social-text"><span class="social-name">Lhikioui.tech</span><span class="social-handle">Blog &
+                  Contenu Tech</span></div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" autocomplete="name" required />
+            <span class="field-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" autocomplete="email" required />
+            <span class="field-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Ex: Collaboration sur un projet IA médicale" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..."
+              required></textarea>
+            <span class="field-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span id="btn-text">Envoyer le message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13" />
+              <path d="M22 2L15 22l-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+          <div class="form-success" id="form-success"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;color:#00C864"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Message envoyé avec succès ! Je vous répondrai dans les plus
+            brefs délais.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo"><span class="logo-bracket">&lt;</span>ML<span class="logo-bracket">/&gt;</span></div>
+        <p class="footer-tagline">Ingénieur Digital &amp; IA · SupTech Santé</p>
+        <div class="footer-links">
+          <a href="#hero">Accueil</a><a href="#about">À propos</a><a href="#skills">Compétences</a><a
+            href="#projects">Projets</a><a href="#contact">Contact</a>
+        </div>
+        <p class="footer-copy">© 2026 Mohamed Lhikioui — Conçu &amp; développé avec <svg viewBox="0 0 24 24" fill="#ff6b9d" stroke="none" style="width:14px;height:14px;vertical-align:middle;display:inline-block"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></p>
+      </div>
+    </div>
+    <button id="back-to-top" aria-label="Retour en haut">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
