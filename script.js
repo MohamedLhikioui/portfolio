@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    SCRIPT.JS — Portfolio Mohamed Lhikioui
    Vanilla JavaScript — No frameworks
    ============================================ */
@@ -186,6 +186,8 @@ const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.querySelectorAll('.skill-fill').forEach((fill, i) => {
+        const targetWidth = fill.getAttribute('data-target') || '80%';
+        fill.style.setProperty('--target', targetWidth);
         setTimeout(() => fill.classList.add('animated'), i * 120);
       });
       skillObserver.unobserve(entry.target);
