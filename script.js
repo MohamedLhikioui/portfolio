@@ -36,6 +36,22 @@ async function loadAllModules() {
   const container = document.getElementById('main-content');
   if (!container) return;
 
+  // Si les sections sont déjà présentes dans index.html, initialiser immédiatement sans fetch
+  if (document.getElementById('hero')) {
+    initDynamicComponents();
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        setTimeout(() => {
+          const navH = document.getElementById('navbar')?.offsetHeight || 70;
+          const top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+    return;
+  }
+
   try {
     // Chargement parallèle avec Promise.all pour des performances optimales
     const fragments = await Promise.all(MODULES_TO_LOAD.map(fetchFragment));
@@ -460,13 +476,16 @@ function initDynamicComponents() {
   updateActiveNavLink();
 }
 
-// ==========================================================================
-// 5. DÉMARRAGE DE L'APPLICATION
-// ==========================================================================
-document.addEventListener('DOMContentLoaded', () => {
+function startApp() {
   updateNavbar();
   updateBackToTop();
   loadAllModules();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startApp);
+} else {
+  startApp();
+}
 
 console.log('%c Mohamed Lhikioui — Architecture Modulaire Vanilla JS', 'color: #00F0FF; font-size: 16px; font-weight: bold; font-family: Fira Code;');
