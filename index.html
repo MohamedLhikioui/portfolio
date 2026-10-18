@@ -73,43 +73,54 @@
 
       <h1 class="hero-name">
         <span class="name-line">Mohamed</span>
-        <span class="name-line accent-text">Lhikioui</span>
+        <span class="name-line">Lhikioui</span>
       </h1>
 
       <p class="hero-subtitle">
-        Élève Ingénieur en <span class="highlight-cyan">Génie Digital &amp; IA</span> en Santé<br />
-        <span class="fira">2ème année</span> · École <span class="highlight-purple">SupTech Santé</span>
+        Élève Ingénieur en <strong>Génie Digital &amp; IA</strong> en Santé<br />
+        <span class="fira">2ème année</span> · École <strong>SupTech Santé</strong>
       </p>
 
-      <!-- Badges technologiques -->
-      <div class="hero-tags">
-        <span class="tag">
-          <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.66z"/>
-            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.66z"/>
-          </svg>
-          IA Médicale
-        </span>
-        <span class="tag">
-          <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-          </svg>
-          Digital Health
-        </span>
-        <span class="tag">
-          <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <polyline points="16 18 22 12 16 6"/>
-            <polyline points="8 6 2 12 8 18"/>
-          </svg>
-          Full Stack
-        </span>
-        <span class="tag">
-          <svg class="tag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="11" cy="11" r="8"/>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-          LLM / RAG
-        </span>
+      <!-- 4 capsules technologiques en verre (style mockup) -->
+      <div class="hero-pills">
+        <div class="hero-pill">
+          <div class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.66z"/>
+              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.66z"/>
+            </svg>
+          </div>
+          <span class="pill-label">IA Médicale</span>
+        </div>
+
+        <div class="hero-pill">
+          <div class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12h5l3-8 4 16 3-8h5"/>
+            </svg>
+          </div>
+          <span class="pill-label">Digital Health</span>
+        </div>
+
+        <div class="hero-pill">
+          <div class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 7 4 12 9 17"/>
+              <polyline points="15 7 20 12 15 17"/>
+            </svg>
+          </div>
+          <span class="pill-label">Full Stack</span>
+        </div>
+
+        <div class="hero-pill">
+          <div class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"/>
+              <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+            </svg>
+          </div>
+          <span class="pill-label">LLM / RAG</span>
+        </div>
       </div>
 
       <!-- Boutons d'action CTA -->
@@ -131,13 +142,16 @@
       </div>
     </div>
 
-    <!-- Photo de profil avec halo interactif -->
+    <!-- Photo de profil avec halo interactif et badge SupTech (conserve me.jpeg) -->
     <div class="hero-photo">
       <div class="profile-img-wrap">
         <img src="me.jpeg" alt="Mohamed Lhikioui - Élève Ingénieur en Génie Digital et IA en Santé"
           class="profile-img" />
         <div class="profile-img-glow"></div>
         <div class="profile-img-ring"></div>
+        <div class="profile-badge-suptech">
+          <span>SupTech Santé</span>
+        </div>
       </div>
     </div>
   </div>
